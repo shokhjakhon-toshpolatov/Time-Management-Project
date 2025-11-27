@@ -1,61 +1,189 @@
-# Task Management System with Mini-Games
+# Time Management System (C++)
 
-A C++ console application that combines a task management system with entertaining mini-games. This project demonstrates object-oriented programming concepts and file handling in C++.
+A **menu-based Time Management System** built in C++ that helps users manage tasks, take breaks with games, and use a timer. The system stores tasks in a text file and provides options to add, edit, delete, and view tasks.
 
-## Features
+---
 
-### Task Management System
-- Add new tasks with descriptions, deadlines, and priorities
-- View all tasks in a formatted list
-- Search for specific tasks
-- Edit existing task details
-- Delete tasks
-- Data persistence using file storage
+## Key Features
 
-### Mini-Games
-1. **Rock, Paper, Scissors**
-   - Play against the computer
-   - Simple and interactive gameplay
+- **Task Management**
+  - Add, edit, delete, and view tasks.
+  - Tasks include a description, deadline, and priority level (1–5).
+  - Tasks are stored in `tasks.txt`.
 
-2. **Countdown Timer**
-   - Set custom countdown timers
-   - Useful for productivity and time management
+- **Break Games**
+  - Includes simple games to help users take a break.
 
-## Getting Started
+- **Timer**
+  - A countdown timer for productivity sessions.
 
-### Prerequisites
-- C++ compiler (e.g., g++, MSVC, or Clang)
-- Standard C++ library support
+- **User-Friendly Menu**
+  - Intuitive menu-based navigation for all features.
 
-### Compilation
-To compile the program, run:
-```bash
-g++ main.cpp -o main
+---
+
+## Program Workflow
+
+```mermaid
+flowchart TD
+
+A[Start Program] --> B[Load Tasks from tasks.txt]
+B --> C[Show Main Menu]
+
+C --> D1[1. Manage Tasks]
+C --> D2[2. Take a Break]
+C --> D3[3. Timer]
+C --> D4[0. Save and Exit]
+
+D1 --> E1[Add Task]
+D1 --> E2[Edit Task]
+D1 --> E3[Delete Task]
+D1 --> E4[View Tasks]
+E1 --> C
+E2 --> C
+E3 --> C
+E4 --> C
+
+D2 --> F1[Game 1]
+D2 --> F2[Game 2]
+F1 --> C
+F2 --> C
+
+D3 --> G[Start Timer]
+G --> C
+
+D4 --> Z[End Program]
 ```
 
-### Running the Application
-After compilation, execute the program:
-- On Windows: `main.exe`
-- On Unix/Linux: `./main`
+---
 
-## Usage
-1. Launch the application to see the main menu
-2. Select an option:
-   - Task Management: Manage your to-do list
-   - Games: Access the mini-games
-   - Timer: Set up countdown timers
+## How to Run
 
-## File Structure
-- `main.cpp` - Contains all the application code
-- `tasks.txt` - Automatically created to store task data
+1. **Compile the Code**
+   ```bash
+   g++ main.cpp -o time_management
+   ```
 
-## Note
-This application uses console-based input/output and is designed to run in a terminal/command prompt window.
+2. **Run the Executable**
+   ```bash
+   ./time_management
+   ```
 
-## Authors
-Shohjahon Toshpo'latov [ID: 250270]
-Munira Xudoyberganova [ID: 250172]
-Dilnoza Najmiddinova [ID: 250070]
+---
 
-## License
-This project is open source and available under the MIT License.
+## Example Console Output
+
+```plaintext
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~  TIME MANAGEMENT SYSTEM  ~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. Tasks
+2. Take a little break
+3. Timer
+0. Save and Exit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Enter your choice: 
+```
+
+---
+
+## Data File Structure
+
+### tasks.txt:
+```makefile
+ID: 1
+Description: Complete project report
+Deadline: 2025-12-01
+Priority: 5
+--------------------------------------------------
+```
+
+---
+
+## Detailed Features
+
+### Task Management
+- **Add Task**: Users can add tasks with a description, deadline, and priority level.
+- **Edit Task**: Modify existing tasks by updating their details.
+- **Delete Task**: Remove tasks by their unique ID.
+- **View Tasks**: Display all tasks in a structured format.
+
+### Break Games
+- **Game 1**: A simple game to refresh the mind.
+- **Game 2**: Another engaging game for relaxation.
+
+### Timer
+- Set a countdown timer for productivity sessions.
+- Helps users focus on tasks for a set duration.
+
+---
+
+## Program Logic
+
+### Task Management Logic
+```mermaid
+flowchart LR
+A[Add Task] --> B[Enter Description]
+B --> C[Enter Deadline]
+C --> D[Enter Priority]
+D --> E[Generate Unique Task ID]
+E --> F[Save to tasks.txt]
+F --> G[Task Added Successfully]
+```
+
+### Timer Logic
+```mermaid
+flowchart LR
+A[Start Timer] --> B[Enter Duration]
+B --> C[Countdown Begins]
+C --> D[Time's Up!]
+```
+
+### Break Games Logic
+```mermaid
+flowchart LR
+A[Choose Game] --> B[Game 1]
+A --> C[Game 2]
+B --> D[Play Game 1]
+C --> E[Play Game 2]
+D --> F[Return to Main Menu]
+E --> F
+```
+
+---
+
+## Menu Overview
+
+```plaintext
+1. Manage Tasks
+2. Take a Break
+3. Timer
+0. Save and Exit
+```
+
+---
+
+## Example Task Addition
+
+```plaintext
+Enter task description: Complete project report
+Enter deadline: 2025-12-01
+Enter priority [1-5]: 5
+Task added successfully!
+```
+
+---
+
+## Future Improvements
+
+- Add more games for breaks.
+- Enhance the task management system with categories and reminders.
+- Implement a graphical user interface (GUI).
+- Add support for recurring tasks and notifications.
+- Integrate with calendar applications for better scheduling.
+
+---
+
+## Quick Info
+
+The <ins>project</ins> is done by ***Shokhjakhon Toshpolatov*** as part of a learning exercise for C++ programming. It demonstrates the use of file handling, classes, and menu-driven programs. The project was completed on **November 27, 2025**.
