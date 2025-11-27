@@ -186,4 +186,5 @@ Task added successfully!
 
 ## Quick Info
 
-The <ins>project</ins> is done by ***Shokhjakhon Toshpolatov*** as part of a learning exercise for C++ programming. It demonstrates the use of file handling, classes, and menu-driven programs. The project was completed on **November 27, 2025**.
+The <ins>project</ins> is done by ***Shohjahon Toshpolatov [ID: 250270], Munira Xudoyberganova [250172], and Dilnoza Najmiddinova [250070]*** as part of a learning exercise for C++ programming. It demonstrates the use of file handling, classes, and menu-driven programs. The project was completed on **November 27, 2025**.
+
