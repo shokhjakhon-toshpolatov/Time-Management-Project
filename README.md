@@ -30,13 +30,13 @@ A C++ console application that combines a task management system with entertaini
 ### Compilation
 To compile the program, run:
 ```bash
-g++ main.cpp -o TaskManager
+g++ main.cpp -o main
 ```
 
 ### Running the Application
 After compilation, execute the program:
-- On Windows: `TaskManager.exe`
-- On Unix/Linux: `./TaskManager`
+- On Windows: `main.exe`
+- On Unix/Linux: `./main`
 
 ## Usage
 1. Launch the application to see the main menu
@@ -52,8 +52,10 @@ After compilation, execute the program:
 ## Note
 This application uses console-based input/output and is designed to run in a terminal/command prompt window.
 
-## Author
-[Your Name] - Replace with your name and contact information
+## Authors
+Shohjahon Toshpo'latov [ID: 250270]
+Munira Xudoyberganova [ID: 250172]
+Dilnoza Najmiddinova [ID: 250070]
 
 ## License
 This project is open source and available under the MIT License.
